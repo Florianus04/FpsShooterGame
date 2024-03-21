@@ -114,6 +114,8 @@ public class ShootControl : MonoBehaviour
         }
 
         SightControl();
+
+        PrintText();
     }
     void SightControl()
     {
@@ -169,6 +171,18 @@ public class ShootControl : MonoBehaviour
     void Empty()
     {
         audioSource.PlayOneShot(emptySound, 1f);
+    }
+    void PrintText()
+    {
+        currentAmmoText.text = ("Ammo : " + currentAmmo);
+        if (isAuto)
+            shootModeText.text = ("ShootMode : Auto");
+        else
+            shootModeText.text = ("ShootMode : Semi");
+        if (sightOn)
+            sightModeText.text = ("SightMode : 200 mt");
+        else
+            sightModeText.text = ("SightMode : 100 mt");
     }
     IEnumerator Light()
     {
