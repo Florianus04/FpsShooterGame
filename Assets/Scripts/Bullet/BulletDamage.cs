@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BulletDamage : MonoBehaviour
 {
-    public GameObject damageEffect;
     public AudioClip damageSound;
+    public string distance;
     private AudioSource audioSource;
     private void Start()
     {
@@ -15,9 +16,9 @@ public class BulletDamage : MonoBehaviour
     {
         if (collision.gameObject.tag.Equals("Bullet"))
         {
-            Debug.Log("isabet");
-            GameObject smoke = Instantiate(damageEffect, collision.transform.position, damageEffect.transform.rotation);
-            Destroy(smoke, 2f);
+            Buttons.shootConsole.gameObject.GetComponent<Text>().text = ("Shoot " + distance + " mt");
+            Buttons.shootCountText.gameObject.GetComponent<Text>().text = ("Shoot Count : " + Buttons.shootCount);
+            Buttons.shootCount += 1;
             Destroy(collision.gameObject);
             audioSource.PlayOneShot(damageSound, 1f);           
         }
