@@ -6,6 +6,8 @@ public class Bullet : MonoBehaviour
 {
     public Transform target;
 
+    public GameObject bulletDamage;
+
     public float speed = 50f;
 
     public float lifeTime = 5f;
@@ -24,5 +26,10 @@ public class Bullet : MonoBehaviour
         GetComponent<Rigidbody>().velocity = direction * speed;
         //mermiyi omru bitince yok et
         Destroy(gameObject, lifeTime);
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        GameObject damage = Instantiate(bulletDamage, transform.position, bulletDamage.transform.rotation);
+        Destroy(damage, 2f);
     }
 }

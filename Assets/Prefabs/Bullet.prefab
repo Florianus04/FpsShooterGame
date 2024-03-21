@@ -122,6 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  bulletDamage: {fileID: 3575238872697442237, guid: 3c023609363153b449a5f82af73f5c02,
+    type: 3}
   speed: 50
   lifeTime: 5
 --- !u!54 &7163028449784833625
