@@ -6,9 +6,7 @@ public class Bullet : MonoBehaviour
 {
     public Transform target;
 
-    public GameObject bulletDamage;
-
-    public float speed = 50f;
+    public float speed;
 
     public float lifeTime = 5f;
 
@@ -25,11 +23,32 @@ public class Bullet : MonoBehaviour
         //hedefe dogru kuvvet uygula
         GetComponent<Rigidbody>().velocity = direction * speed;
         //mermiyi omru bitince yok et
-        Destroy(gameObject, lifeTime);
+        Destroy(gameObject, lifeTime);      
+    }
+    private void Update()
+    {
+        //raycast ile daha saglikli bir carpisma kontrolu
+        RaycastHit hit;
+        if(Physics.Raycast(transform.position, transform.forward * -1, out hit, 5))
+        {
+            if (hit.transform.gameObject.tag.Equals("Target"))
+            {
+                HitTarget(hit.transform.gameObject);
+                Destroy(this.gameObject);
+            }             
+        }
+    }
+    void HitTarget(GameObject collision)
+    {
+        Debug.Log("isabet");
+        collision.GetComponent<BulletDamage>().Damage();
     }
     private void OnCollisionEnter(Collision collision)
     {
-        GameObject damage = Instantiate(bulletDamage, transform.position, bulletDamage.transform.rotation);
-        Destroy(damage, 2f);
+        if (collision.gameObject.tag.Equals("Target"))
+        {
+            HitTarget(collision.gameObject);
+            Destroy(this.gameObject);
+        }            
     }
 }

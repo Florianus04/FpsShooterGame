@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7016992913465620294}
   m_Layer: 0
   m_Name: Target
-  m_TagString: Untagged
+  m_TagString: Target
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,7 +32,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 426.7, y: 6.799999, z: 669.5}
-  m_LocalScale: {x: 5, y: 5, z: 0.8}
+  m_LocalScale: {x: 5, y: 5, z: 10}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -120,9 +120,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1ae74df3d41c4b842a92f53fde059d80, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageEffect: {fileID: 2848274441553333949, guid: a02514896462f0a4981e022a8d747982,
-    type: 3}
   damageSound: {fileID: 8300000, guid: caa6d971621a20c40bebfa01369ac7fa, type: 3}
+  damageEffect: {fileID: 0}
+  distance: 
 --- !u!82 &5902494373333265541
 AudioSource:
   m_ObjectHideFlags: 0

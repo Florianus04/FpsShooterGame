@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ladder
   - Bullet
+  - Target
   layers:
   - Default
   - TransparentFX

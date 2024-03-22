@@ -40,7 +40,7 @@ public class ShootControl : MonoBehaviour
 
     public float shootSpeed = 0.8f;//atis hizi
     public float reloadTime = 1.5f;//reload suresi
-    public float bulletSpeed = 50f;//mermi cikis hizi
+    public float bulletSpeed = 100f;//mermi cikis hizi
 
     public bool isAuto = true;//atis modu
     public bool sightOn = false;//nisangah ayari

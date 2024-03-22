@@ -480,7 +480,7 @@ MonoBehaviour:
   currentAmmo: 0
   shootSpeed: 0.1
   reloadTime: 1.5
-  bulletSpeed: 50
+  bulletSpeed: 5000
   isAuto: 1
   sightOn: 0
 --- !u!114 &903697332637583634

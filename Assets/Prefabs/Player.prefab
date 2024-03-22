@@ -74,6 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05ec5cf00ca181d45a42ba1870e148c3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  weaponAnimator: {fileID: 323314047077859959}
   m_IsWalking: 0
   m_WalkSpeed: 5
   m_RunSpeed: 10
@@ -378,7 +379,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.3
-  far clip plane: 200
+  far clip plane: 300
   field of view: 60
   orthographic: 0
   orthographic size: 5
@@ -466,6 +467,11 @@ PrefabInstance:
       objectReference: {fileID: 6929705526780997072}
     - target: {fileID: 3472678440276427796, guid: 5a935b5df1e1c8a449bfb63030dc79ca,
         type: 3}
+      propertyPath: bulletSpeed
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 3472678440276427796, guid: 5a935b5df1e1c8a449bfb63030dc79ca,
+        type: 3}
       propertyPath: cameraAnimator
       value: 
       objectReference: {fileID: 3115089616545990705}
@@ -524,6 +530,12 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a935b5df1e1c8a449bfb63030dc79ca, type: 3}
+--- !u!95 &323314047077859959 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2075283270372079089, guid: 5a935b5df1e1c8a449bfb63030dc79ca,
+    type: 3}
+  m_PrefabInstance: {fileID: 1779000236839991174}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &3002018834984798119 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3537884767790034977, guid: 5a935b5df1e1c8a449bfb63030dc79ca,
