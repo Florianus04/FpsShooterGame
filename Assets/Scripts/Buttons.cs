@@ -17,6 +17,8 @@ public class Buttons : MonoBehaviour
         shootConsole = GameObject.Find("ShootConsole");
         shootCountText = GameObject.Find("ShootCount");
         infoPanel.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
     }
     void Update()
     {
@@ -37,7 +39,12 @@ public class Buttons : MonoBehaviour
         {
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
-        }         
+        }
+        else
+        {
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+        }
     }
     public void ExitGame()
     {

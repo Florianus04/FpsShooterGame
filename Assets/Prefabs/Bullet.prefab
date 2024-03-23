@@ -122,6 +122,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 0}
+  damageEffect: {fileID: 2848274441553333949, guid: a02514896462f0a4981e022a8d747982,
+    type: 3}
   speed: 0
   lifeTime: 5
 --- !u!54 &7163028449784833625

@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class BulletDamage : MonoBehaviour
 {
-    public AudioClip damageSound;
-    public GameObject damageEffect;
+    public AudioClip damageSound;    
     public string distance;
     private AudioSource audioSource;
     private void Start()

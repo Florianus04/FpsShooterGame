@@ -153,6 +153,7 @@ public class ShootControl : MonoBehaviour
 
         animator.SetTrigger("Shoot");//atis animasyomumu oynat
         this.gameObject.GetComponent<CameraAnims>().Shake(0.05f, 0.05f);
+        camera.Shake(0.1f, 0.5f);
 
         audioSource.PlayOneShot(shootSound, 1f);//atis sesi   
         
@@ -180,7 +181,7 @@ public class ShootControl : MonoBehaviour
         else
             shootModeText.text = ("ShootMode : Semi");
         if (sightOn)
-            sightModeText.text = ("SightMode : 200 mt");
+            sightModeText.text = ("SightMode : 500 mt");
         else
             sightModeText.text = ("SightMode : 100 mt");
     }
